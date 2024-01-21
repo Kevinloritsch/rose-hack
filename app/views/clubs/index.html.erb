@@ -1,0 +1,79 @@
+  <%= form_with(model: @choice, local:true) do |f| %>
+    <div class="text-black">
+      <%= f.select :name, ['N/A', 'Hackathon', 'Design', 'Software Engineering'], {}, { onchange: 'this.form.submit();', class: "w-full border border-fuchsia-400 border-4 outline-none" } %>
+      </div>
+  <% end %>
+
+<div class="grid grid-cols-2 grid-rows-auto gap-8 p-8">
+  <% Club.all.each do |club| %>
+    <% if @choice.name == 'N/A' %>
+        <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+          <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+              <div><%= club.name %> </div>
+              <div class="text-lg"><%= club.shortDescription %> </div>
+              <br />
+              <div class="text-lg italic"><%= club.longDescription %> </div>
+              <br />
+              <div class="text-lg text-left"><%= club.address %> </div>
+              <div class="text-lg text-left"><%= club.email %> </div>
+              <div class="text-lg text-left"><%= club.phoneNumber %> </div>
+              <div class="text-lg underline"><%= link_to club.name, club_path(club) %></div>
+          </div>
+        </div>
+
+    <% elsif @choice.name == 'Hackathon' %>
+      <% if club.filter == 'Hackathon' %>
+        <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+            <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+              <div><%= club.name %> </div>
+              <div class="text-lg"><%= club.shortDescription %> </div>
+              <br />
+              <div class="text-lg italic"><%= club.longDescription %> </div>
+              <br />
+              <div class="text-lg text-left"><%= club.address %> </div>
+              <div class="text-lg text-left"><%= club.email %> </div>
+              <div class="text-lg text-left"><%= club.phoneNumber %> </div>
+              <div class="text-lg underline"><%= link_to club.name, club_path(club) %></div>
+            </div>
+        </div>
+      <% end %>
+
+    <% elsif @choice.name == 'Design' %>
+      <% if club.filter == 'Design' %>
+        <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+          <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+            <div><%= club.name %> </div>
+            <div class="text-lg"><%= club.shortDescription %> </div>
+            <br />
+            <div class="text-lg italic"><%= club.longDescription %> </div>
+            <br />
+            <div class="text-lg text-left"><%= club.address %> </div>
+            <div class="text-lg text-left"><%= club.email %> </div>
+            <div class="text-lg text-left"><%= club.phoneNumber %> </div>
+            <div class="text-lg underline"><%= link_to club.name, club_path(club) %></div>
+          </div>
+        </div>
+      <% end %>
+
+    <% elsif @choice.name == 'Software Engineering' %>
+    <% if club.filter == 'Software Engineering' %>
+      <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+          <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+            <div><%= club.name %> </div>
+            <div class="text-lg"><%= club.shortDescription %> </div>
+            <br />
+            <div class="text-lg italic"><%= club.longDescription %> </div>
+            <br />
+            <div class="text-lg text-left"><%= club.address %> </div>
+            <div class="text-lg text-left"><%= club.email %> </div>
+            <div class="text-lg text-left"><%= club.phoneNumber %> </div>
+            <div class="text-lg underline"><%= link_to club.name, club_path(club) %></div>
+          </div>
+      </div>
+    <% end %>
+
+
+    <% end %>
+
+  <% end %>
+</div>

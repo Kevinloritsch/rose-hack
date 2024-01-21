@@ -1,0 +1,42 @@
+<%= form_with(model: @club, local:true) do |f| %>
+    <div class="text-black">
+        <%= f.label :name, class:"text-white" %>
+        <%= f.text_field :name, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :shortDescription, class:"text-white" %>
+        <%= f.text_field :shortDescription, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :longDescription, class:"text-white" %>
+        <%= f.text_field :longDescription, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :address, class:"text-white" %>
+        <%= f.text_field :address, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :email, class:"text-white" %>
+        <%= f.text_field :email, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :phoneNumber, class:"text-white" %>
+        <%= f.text_field :phoneNumber, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :filter, class:"text-white" %>
+        <%= f.select :filter, ['N/A', 'Hackathon', 'Design', 'Software Engineering'], { prompt: 'Select an option' }, class:"border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.submit 'Edit', class:"text-white bg-slate-500 p-2 my-4 rounded-md cursor-pointer" %>
+    </div>
+
+
+<% end %>

@@ -1,0 +1,35 @@
+<div class="text-white font-sans text-center text-6xl pt-8">HIGHLANDER STEM CLUBS</div>
+<br />
+<br />
+<br />
+
+<div class = "border border-fuchsia-400 border-4 p-4 w-1/4 mx-auto">
+    <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto w-full">
+        <%= link_to "HEAD TO CLUBS", '/clubs' %>
+    </div>
+</div>
+
+<br />
+<br />
+
+<div class="text-white font-sans text-center text-3xl pt-8">UPCOMING EVENTS</div>
+
+
+<% counter = 0 %>
+<div class="relative flex flex-wrap justify-center p-8">
+    <% Event.all.each do |event| %>
+        <div class = "border border-fuchsia-400 border-4 p-4 m-8 w-2/5">
+            <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto w-full">
+                <div><%= event.name %> </div>
+                <div class="font-bold text-lg"><%= event.club %> </div>
+                <div class="text-lg"><%= event.description %> </div>
+                <div class="text-lg text-left font-bold"><%= event.date %> </div>
+            </div>
+        </div>
+        <% counter = counter + 1 %>
+        <% if counter == 3 %>
+            <% break %>
+        <% end %>
+    <% end %>
+</div>
+

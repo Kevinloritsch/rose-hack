@@ -1,0 +1,16 @@
+<header class="h-16"> 
+    <div class="h-14 bg-black outline outline-6 outline-fuchsia-600 outline-offset-4"> 
+        <div class="relative flex flex-wrap pt-2 pl-4 w-full">
+            <%= link_to image_tag("logo.png", alt: "Highlander Logo", width: "50"), root_path, id: "logo" %>
+
+            <ul class="text-white font-sans text-right text-lg px-8 pt-1 space-x-16 ml-auto">
+                <%= link_to "CLUBS", '/clubs' %>
+
+                <%= link_to "EVENTS", '/events' %>
+            </ul>
+        </div>
+    </div>
+    <div class="h-2 bg-fuchsia-400 blur-sm">
+    </div>
+
+</header>

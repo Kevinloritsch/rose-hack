@@ -1,0 +1,13 @@
+<div class="relative flex flex-wrap justify-center p-8">
+  <% Event.all.each do |event| %>
+    <div class = "border border-fuchsia-400 border-4 p-4 m-8 w-2/5">
+        <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto w-full">
+            <div><%= event.name %> </div>
+            <div class="font-bold text-lg"><%= event.club %> </div>
+            <div class="text-lg"><%= event.description %> </div>
+            <div class="text-lg text-left font-bold"><%= event.date %> </div>
+        </div>
+    </div>
+
+  <% end %>
+</div>

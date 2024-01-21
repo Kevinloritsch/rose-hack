@@ -1,0 +1,29 @@
+<div class="grid grid-cols-2 grid-rows-auto gap-8 p-8">
+    <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+        <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+            <div><%= @club.name %> </div>
+            <div class="text-lg"><%= @club.shortDescription %> </div>
+            <br />
+            <div class="text-lg italic"><%= @club.longDescription %> </div>
+            <br />
+            <div class="text-lg text-left"><%= @club.address %> </div>
+            <div class="text-lg text-left"><%= @club.email %> </div>
+            <div class="text-lg text-left"><%= @club.phoneNumber %> </div>
+            <div class="text-lg underline"><%= link_to 'Edit', edit_club_path(@club) %></div>
+        </div>
+    </div>
+    <div class="grid-rows-auto">
+        <% Event.all.each do |event| %>
+            <% if event.club == @club.name %>
+            <div class = "border border-fuchsia-400 border-4 p-4 m-8">
+                <div class="text-white font-sans text-center text-3xl p-3 border border-white mx-auto">
+                    <div><%= event.name %> </div>
+                    <div class="font-bold text-lg"><%= event.club %> </div>
+                    <div class="text-lg"><%= event.description %> </div>
+                    <div class="text-lg text-left font-bold"><%= event.date %> </div>
+                </div>
+            </div>
+            <% end %>
+        <% end %>
+    </div>
+</ div>

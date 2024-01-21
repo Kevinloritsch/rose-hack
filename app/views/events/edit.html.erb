@@ -1,0 +1,25 @@
+<%= form_with(model: @event, local:true) do |f| %>
+    <div class="text-black">
+        <%= f.label :name, class:"text-white" %>
+        <%= f.text_field :name, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :club, class:"text-white" %>
+        <%= f.text_field :club, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :description, class:"text-white" %>
+        <%= f.text_field :description, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <br> </br>
+
+        <%= f.label :date, class:"text-white" %>
+        <%= f.text_field :date, class:"w-full border border-fuchsia-400 border-4 outline-none" %>
+
+        <%= f.submit 'Edit', class:"text-white bg-slate-500 p-2 my-4 rounded-md cursor-pointer" %>
+    </div>
+
+
+<% end %>
