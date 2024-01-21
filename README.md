@@ -19,5 +19,7 @@ Some challenges that we ran into were trying to figure out how to use Tailwind t
 We are proud of the back end functionality of the website and some specific design elements. 
 
 ## What we learned
+We learned how to collaborate and work together in merging our various front end and back end development abilities to create a project.
 
-## What's next for Untitled
+## What's next for Highlander Stem Clubs
+If we had more time to work on this project, we would work to improve some of the various back end functionalities. For example, dates on the events are currently gibberish with no validations, and are not ordered in any way. Furthermore, anyone is able to access and edit club information, which should be updated with permissions.
